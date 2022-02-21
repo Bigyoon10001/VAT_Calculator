@@ -3,41 +3,45 @@
   <head>
     <title>VAT Calculator</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>VAT Calculator</h1>
-    <ol>
-      <li><a href="main.html">VAT Calculator</a></li>
-      <li><a href="how_to_calculate.html">How to claculate VAT</a></li>
-      <li><a href="how_to_report.html">How to report VAT</a></li>
-      <li><a href="what_is.html">What is VAT</a></li>
-    </ol>
-
-    <h2>How to calculate VAT?</h2>
-    <h3>합계금액을 알고 있는 경우(공급가액+부가세)</h3>
-    <p>부가세가 포함된 합계금액을 알고 있는경우 공급가액과 부가세를 분리해내는 계산 방법 입니다.</p>
-    <p> <strong>
-      합계금액 / 1.1 = 공급가액 <br>
-      합계금액 - 공급가액 = 부가세
-    </strong> </p>
-    <p>
-      예제)
-      합계금액 110만원의 공급가액과 부가세를 계산해보면<br>
-      1,100,000(합계금액) / 1.1 = 1,000,000(공급가액)<br>
-      1,100,000(합계금액) - 1,000,000(공급가액) = 100,000(부가세)<br>
-      1,000,000(공급가액) + 100,000(부가세) = 1,100,000(합계금액)
-    </p>
-    <br><br>
-    <h3>공급가액을 알고 있는 경우</h3>
-    <p>공급가액을 알고 있고 부가세를 포함한 합계금액을 알고 싶은경우 계산 방법 입니다.</p>
-    <p> <strong>
-      공급가액 + 부가세 = 합계금액
-    </strong> </p>
-    <p>
-      예제)
-      공급가액 100만원의 부가세와 합계금액을 계산해보면<br>
-      1,000,000(공급가액) / 10 = 100,000(부가세)<br>
-      1,000,000(공급가액) + 100,000(부가세) = 1,000,000(합계금액)
-    </p>
+    <div id="grid">
+      <ol>
+        <li><a href="main.html">VAT Calculator</a></li>
+        <li><a href="how_to_calculate.html">How to claculate VAT</a></li>
+        <li><a href="how_to_report.html">How to report VAT</a></li>
+        <li><a href="what_is.html">What is VAT</a></li>
+      </ol>
+      <div id="article">
+        <h2>How to calculate VAT?</h2>
+        <h3>합계금액을 알고 있는 경우(공급가액+부가세)</h3>
+        <p>부가세가 포함된 합계금액을 알고 있는경우 공급가액과 부가세를 분리해내는 계산 방법 입니다.</p>
+        <p> <strong>
+          합계금액 / 1.1 = 공급가액 <br>
+          합계금액 - 공급가액 = 부가세
+        </strong> </p>
+        <p>
+          예제)
+          합계금액 110만원의 공급가액과 부가세를 계산해보면<br>
+          1,100,000(합계금액) / 1.1 = 1,000,000(공급가액)<br>
+          1,100,000(합계금액) - 1,000,000(공급가액) = 100,000(부가세)<br>
+          1,000,000(공급가액) + 100,000(부가세) = 1,100,000(합계금액)
+        </p>
+        <br><br>
+        <h3>공급가액을 알고 있는 경우</h3>
+        <p>공급가액을 알고 있고 부가세를 포함한 합계금액을 알고 싶은경우 계산 방법 입니다.</p>
+        <p> <strong>
+          공급가액 + 부가세 = 합계금액
+        </strong> </p>
+        <p>
+          예제)
+          공급가액 100만원의 부가세와 합계금액을 계산해보면<br>
+          1,000,000(공급가액) / 10 = 100,000(부가세)<br>
+          1,000,000(공급가액) + 100,000(부가세) = 1,000,000(합계금액)
+        </p>
+      </div>
+    </div>
   </body>
 </html>

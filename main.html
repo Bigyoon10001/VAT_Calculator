@@ -3,38 +3,50 @@
   <head>
     <title>VAT Calculator</title>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="vat.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>VAT Calculator</h1>
-    <ol>
-      <li><a href="main.html">VAT Calculator</a></li>
-      <li><a href="how_to_calculate.html">How to claculate VAT</a></li>
-      <li><a href="how_to_report.html">How to report VAT</a></li>
-      <li><a href="what_is.html">What is VAT</a></li>
-    </ol>
+    <div id="grid">
+      <ol>
+        <li><a href="main.html">VAT Calculator</a></li>
+        <li><a href="how_to_calculate.html">How to claculate VAT</a></li>
+        <li><a href="how_to_report.html">How to report VAT</a></li>
+        <li><a href="what_is.html">What is VAT</a></li>
+      </ol>
+      <div id="article">
+        <h2>VAT Calculator</h2>
+        <h2>합계금액으로 계산하기</h2>
+        <h3>합계금액(Total amount)</h3>
 
-    <h2>VAT Calculator</h2>
-    <h2>합계금액으로 계산하기</h2>
-    <h3>Total amount</h3>
-    <input type="text"> <strong>원</strong>
-    <input type="button" value="Do calculate">
-    <br>
-    <h3>Value of supply</h3>
-    <input type="text" disabled> <strong>원</strong>
-    <br>
-    <h3>Tax amount</h3>
-    <input type="text" disabled> <strong>원</strong>
-    <br><br><br>
-    <h2>공급가액으로 계산하기</h2>
-    <h3>Value of supply</h3>
-    <input type="text"> <strong>원</strong>
-    <input type="button" value="Do calculate">
-    <br>
-    <h3>Total amount</h3>
-    <input type="text" disabled> <strong>원</strong>
-    <br>
-    <h3>Tax amount</h3>
-    <input type="text" disabled> <strong>원</strong>
-    <br>
+        <input id="total_total_amount" type="number" style="text-align:right"> <strong>원</strong>
+        <input type="button" value="Do calculate" onclick="
+          Total.calculate($('#total_total_amount'));
+        ">
+        <br>
+        <h3>공급가액(Value of supply)</h3>
+        <input id="total_value_of_supply" type="text" style="text-align:right" disabled> <strong>원</strong>
+        <br>
+        <h3>세액(Tax amount)</h3>
+        <input id="total_tax_amount" type="text" style="text-align:right" disabled> <strong>원</strong>
+        <br><br><br>
+
+
+        <h2>공급가액으로 계산하기</h2>
+        <h3>공급가액(Value of supply)</h3>
+        <input id="supply_value_of_supply" type="number" style="text-align:right"> <strong>원</strong>
+        <input type="button" value="Do calculate" onclick="
+          Supply.calculate($('#supply_value_of_supply'));
+        ">
+        <br>
+        <h3>합계금액(Total amount)</h3>
+        <input id="supply_total_amount" type="text" style="text-align:right" disabled> <strong>원</strong>
+        <br>
+        <h3>세액(Tax amount)</h3>
+        <input id="supply_tax_amount" type="text" style="text-align:right" disabled> <strong>원</strong>
+      </div>
+    </div>
   </body>
 </html>
